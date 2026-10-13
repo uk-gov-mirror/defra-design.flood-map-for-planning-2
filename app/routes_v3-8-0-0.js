@@ -7,10 +7,11 @@ const openTile = require('./styles/open-tile.json')
 const vtsTile = require('./styles/vts-tile.json')
 
 const folder = 'v3-8-0-0'
+const mapCodeUrl = process.env.FMP_MAP_CODE_URL || 'https://defra.github.io/fmp-map'
 
 // Add your routes here
 
-require('./router/addLocalsMiddleware')(router, folder)
+require('./router/addLocalsMiddleware')(router, folder, mapCodeUrl)
 
 // User journey wireframe page
 router.get('/user-journey', function (req, res) {
