@@ -66,21 +66,24 @@ router.get('/results', (req, res, next) => {
 router.get('/product-one', (req, res) => res.redirect('/v3-9-0-0/product1'))
 
 // Product 1 variations for user research.
-// /v3-9-0-0/p1/<variation> stores the variation in the session and opens the results page.
-// The results page button goes to /v3-9-0-0/view-product-1, which redirects to the stored variation.
+// /v3-9-0-0/p1/<variation> stores the variation in the session and opens the map with the Product 1 site
+// boundary already drawn. "Get summary report" opens the results page, and its button goes to
+// /v3-9-0-0/view-product-1, which redirects to the stored variation.
 // See /v3-9-0-0/product1-variations for how to use these links in research sessions.
 // setupRouter() returns the kit's shared router, so only respond inside this version's path.
 const p1Variations = {
-  main: 'product1-3',
-  'sample-points': 'product1-4',
+  'existing-map-features': 'product1-3',
+  main: 'product1-3', // earlier link, kept so it still works
   'solid-colours': 'product1-5'
 }
+// Site boundary shown on the Product 1 mock-up maps (British National Grid), next to Wheelwrights and Mount Road
+const p1Polygon = '[[443564.0,161397.81],[443568.1,161393.01],[443565.74,161385.65],[443590.32,161361.76],[443582.68,161353.08],[443559.07,161385.17],[443560.11,161393.01],[443564.0,161397.81]]'
 router.get('/p1/:variation', (req, res, next) => {
   if (req.baseUrl !== '/v3-9-0-0') return next()
   const page = p1Variations[req.params.variation]
   if (!page) return next()
   req.session.data.p1Variation = page
-  res.redirect('/v3-9-0-0/results')
+  res.redirect('/v3-9-0-0/map?polygon=' + p1Polygon)
 })
 router.get('/view-product-1', (req, res, next) => {
   if (req.baseUrl !== '/v3-9-0-0') return next()

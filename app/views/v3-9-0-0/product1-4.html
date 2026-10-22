@@ -3,7 +3,7 @@
 
 {% set p1 = {
   reference: "Unspecified",
-  location: "443551/161359",
+  location: "443574/161376",
   created: "12 October 2026, 10:08",
   scale: "1:2,500"
 } %}
@@ -43,7 +43,7 @@
 
 {% macro swMap(file, title, chance, period) %}
   <figure class="p1-figure">
-    <img src="/public/images/product1-v3-9-0-0/{{ file }}?v=6" alt="Map of the site showing surface water flooding with a {{ chance }} chance each year, {{ period }}. Shaded orange areas show depth, darker for deeper water. Numbered sample points match the table below">
+    <img src="/public/images/product1-v3-9-0-0/{{ file }}?v=7" alt="Map of the site showing surface water flooding with a {{ chance }} chance each year, {{ period }}. Shaded orange areas show depth, darker for deeper water. Numbered sample points match the table below">
     <figcaption class="govuk-body-s"><strong>{{ title }}</strong>: {{ chance }} chance each year, {{ period }}</figcaption>
   </figure>
 {% endmacro %}
@@ -78,16 +78,13 @@
 
   <!-- The quick decision -->
   <section class="p1-section" aria-labelledby="result-heading">
-    <h2 class="govuk-heading-l" id="result-heading">Your site is in flood zone 1</h2>
-    <p class="govuk-body-l">An area with a low probability of flooding from rivers or the sea.</p>
+    <h2 class="govuk-heading-l" id="result-heading">Your site is in flood zone 3</h2>
+    <p class="govuk-body-l">An area with a high probability of flooding from rivers or the sea.</p>
 
-    <h3 class="govuk-heading-m">Flood risk assessments</h3>
-    <p class="govuk-body">You will need to do a flood risk assessment if:</p>
+    <h3 class="govuk-heading-m">This means</h3>
     <ul class="govuk-list govuk-list--bullet">
-      <li>your site is more than 1 hectare</li>
-      <li>your location has been identified as having critical drainage problems</li>
-      <li>your location is identified in the local planning authority's (LPA) strategic flood risk assessment (SFRA) as being at increased flood risk in future</li>
-      <li>development would increase the vulnerability classification and land may be subject to sources of flooding other than rivers or sea</li>
+      <li>you must complete a flood risk assessment for development in this area</li>
+      <li>you should follow the Environment Agency's standing advice for carrying out a flood risk assessment: <a class="govuk-link" href="https://www.gov.uk/guidance/flood-risk-assessment-standing-advice">www.gov.uk/guidance/flood-risk-assessment-standing-advice</a></li>
     </ul>
 
     <h3 class="govuk-heading-m">Data in this summary</h3>
@@ -104,19 +101,19 @@
       <tbody class="govuk-table__body">
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header"><a class="govuk-link" href="#fz-heading">Flood zones</a></th>
-          <td class="govuk-table__cell">Flood zone 1</td>
+          <td class="govuk-table__cell">Flood zone 3</td>
         </tr>
         <tr class="govuk-table__row" data-row="fz-cc">
           <th scope="row" class="govuk-table__header"><a class="govuk-link" href="#fzcc-heading">Flood zones with climate change</a></th>
-          <td class="govuk-table__cell">Flood zone 1</td>
+          <td class="govuk-table__cell">Flood zone 3</td>
         </tr>
         <tr class="govuk-table__row" data-row="sw-present">
           <th scope="row" class="govuk-table__header"><a class="govuk-link" href="#sw-heading">Surface water, present day</a></th>
-          <td class="govuk-table__cell">Surface water at a 1 in 100 chance, up to 300mm deep. See sample points</td>
+          <td class="govuk-table__cell">Surface water inside your site boundary at a 1 in 100 chance, up to 300mm deep. See sample points</td>
         </tr>
         <tr class="govuk-table__row" data-row="sw-cc">
           <th scope="row" class="govuk-table__header"><a class="govuk-link" href="#swcc-heading">Surface water with climate change</a></th>
-          <td class="govuk-table__cell">Surface water at a 1 in 100 chance, up to 300mm deep. See sample points</td>
+          <td class="govuk-table__cell">Surface water inside your site boundary at a 1 in 100 chance, up to 300mm deep. See sample points</td>
         </tr>
       </tbody>
     </table>
@@ -128,7 +125,7 @@
     <p class="govuk-body">Flood zones show the chance of flooding from rivers and the sea, ignoring flood defences. They are used to decide whether a flood risk assessment is needed.</p>
     <div class="p1-map-layout">
       <figure class="p1-figure">
-        <img src="/public/images/product1-v3-9-0-0/example-fz-present.png?v=6" alt="Map of the site and surrounding area. A river channel running north-east to south-west is in flood zone 3, with flood zone 2 along its edges. The site boundary, west of Wheelwrights, is outside flood zones 2 and 3, in flood zone 1">
+        <img src="/public/images/product1-v3-9-0-0/fz-present.png?v=6" alt="Map of the site and surrounding area. A river channel running north-east to south-west is in flood zone 3, with flood zone 2 along its edges. The south-east end of the site boundary is in flood zone 3">
         <figcaption class="govuk-body-s"><strong>Flood zones, present day</strong></figcaption>
       </figure>
       <div class="p1-key-panel">
@@ -157,7 +154,7 @@
     <p class="govuk-body">How flood zones 2 and 3 could extend between 2070 and 2125, based on a central allowance for climate change.</p>
     <div class="p1-map-layout">
       <figure class="p1-figure">
-        <img src="/public/images/product1-v3-9-0-0/example-fz-cc.png?v=6" alt="Map of the site and surrounding area showing flood zones 2 and 3 with climate change, on a black and white base map. The flooded area is similar to present day, with small additional areas near Mount Road shown in light orange. The site boundary stays outside the flooded area">
+        <img src="/public/images/product1-v3-9-0-0/fz-cc.png?v=6" alt="Map of the site and surrounding area showing flood zones 2 and 3 with climate change. The map uses a black and white base map. The flooded area is similar to present day, with small additional areas near Mount Road shown in light orange">
         <figcaption class="govuk-body-s"><strong>Flood zones with climate change</strong>: 2070 to 2125</figcaption>
       </figure>
       <div class="p1-key-panel">
@@ -184,9 +181,10 @@
   <section class="p1-section p1-map-section" id="sw-present" data-section="sw-present" aria-labelledby="sw-heading">
     <h2 class="govuk-heading-l p1-anchor-target" id="sw-heading" tabindex="-1">Surface water, present day</h2>
     <p class="govuk-body">Surface water flooding happens when heavy rain cannot drain away. It is not part of the flood zones, so it does not change whether a flood risk assessment is needed, but you may need to consider it in one. The map shows areas with a 1 in 100 (1%) chance of flooding each year. Numbered points mark each depth found within the boundary, so the depths can be read without relying on colour.</p>
+    <p class="govuk-body">There is a risk of surface water flooding inside your site boundary, up to 300mm deep.</p>
     <div class="p1-map-layout">
       <figure class="p1-figure">
-        <img src="/public/images/product1-v3-9-0-0/points-present-100.png?v=6" alt="Close-up map of an example site boundary showing surface water with a 1 in 100 chance each year, present day. Numbered points are marked inside the boundary and match the table below">
+        <img src="/public/images/product1-v3-9-0-0/points-present-100.png?v=7" alt="Close-up map of the site boundary showing surface water with a 1 in 100 chance each year, present day. Numbered points are marked inside the boundary and match the table below">
         <figcaption class="govuk-body-s"><strong>Surface water, present day</strong>: 1 in 100 (1%) chance each year, with sample points</figcaption>
       </figure>
       <div class="p1-key-panel">
@@ -244,7 +242,7 @@
           <tr class="govuk-table__row">
             <td class="govuk-table__cell">2</td>
             <td class="govuk-table__cell">No surface water</td>
-            <td class="govuk-table__cell">150 to 300mm</td>
+            <td class="govuk-table__cell">Under 150mm</td>
           </tr>
       </tbody>
       </table>
@@ -262,9 +260,10 @@
   <section class="p1-section p1-map-section" id="sw-cc" data-section="sw-cc" aria-labelledby="swcc-heading">
     <h2 class="govuk-heading-l p1-anchor-target" id="swcc-heading" tabindex="-1">Surface water with climate change</h2>
     <p class="govuk-body">How surface water flooding with a 1 in 100 (1%) chance each year could change between 2061 and 2125, based on a central allowance for climate change.</p>
+    <p class="govuk-body">There is a risk of surface water flooding inside your site boundary, up to 300mm deep.</p>
     <div class="p1-map-layout">
       <figure class="p1-figure">
-        <img src="/public/images/product1-v3-9-0-0/points-cc-100.png?v=6" alt="Close-up map of an example site boundary showing surface water with a 1 in 100 chance each year, 2061 to 2125. Numbered points are marked inside the boundary and match the table below">
+        <img src="/public/images/product1-v3-9-0-0/points-cc-100.png?v=7" alt="Close-up map of the site boundary showing surface water with a 1 in 100 chance each year, 2061 to 2125. Numbered points are marked inside the boundary and match the table below">
         <figcaption class="govuk-body-s"><strong>Surface water with climate change</strong>: 1 in 100 (1%) chance each year, with sample points</figcaption>
       </figure>
       <div class="p1-key-panel">
@@ -322,11 +321,6 @@
           <tr class="govuk-table__row">
             <td class="govuk-table__cell">2</td>
             <td class="govuk-table__cell">Under 150mm</td>
-            <td class="govuk-table__cell">150 to 300mm</td>
-          </tr>
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell">3</td>
-            <td class="govuk-table__cell">No surface water</td>
             <td class="govuk-table__cell">Under 150mm</td>
           </tr>
       </tbody>

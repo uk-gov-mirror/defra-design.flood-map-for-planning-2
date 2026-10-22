@@ -16,7 +16,7 @@
     <span class="govuk-caption-l">v3.9.0.0</span>
     <h1 class="govuk-heading-xl">Product 1 variations</h1>
     <p class="govuk-body-l">
-      There are three versions of the Product 1 page to test with users. This guide explains how to send a participant
+      There are two versions of the Product 1 page to test with users. This guide explains how to send a participant
       to each one, what the prototypes can and cannot do, and what each version is designed to test.
     </p>
 
@@ -32,12 +32,8 @@
       </thead>
       <tbody class="govuk-table__body">
         <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">Main design</th>
-          <td class="govuk-table__cell p1-url"><a class="govuk-link" href="https://flood-map-for-planning-proto.herokuapp.com/v3-9-0-0/p1/main">https://flood-map-for-planning-proto.herokuapp.com/v3-9-0-0/p1/main</a></td>
-        </tr>
-        <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">Sample points</th>
-          <td class="govuk-table__cell p1-url"><a class="govuk-link" href="https://flood-map-for-planning-proto.herokuapp.com/v3-9-0-0/p1/sample-points">https://flood-map-for-planning-proto.herokuapp.com/v3-9-0-0/p1/sample-points</a></td>
+          <th scope="row" class="govuk-table__header">Existing map features</th>
+          <td class="govuk-table__cell p1-url"><a class="govuk-link" href="https://flood-map-for-planning-proto.herokuapp.com/v3-9-0-0/p1/existing-map-features">https://flood-map-for-planning-proto.herokuapp.com/v3-9-0-0/p1/existing-map-features</a></td>
         </tr>
         <tr class="govuk-table__row">
           <th scope="row" class="govuk-table__header">Solid colours with map details on top</th>
@@ -46,16 +42,17 @@
       </tbody>
     </table>
 
-    <p class="govuk-body-s">These are links to the hosted prototype. When running the prototype on your own computer, use the same path after your local address, for example <code>http://localhost:3000/v3-9-0-0/p1/main</code>.</p>
+    <p class="govuk-body-s">These are links to the hosted prototype. When running the prototype on your own computer, use the same path after your local address, for example <code>http://localhost:3000/v3-9-0-0/p1/existing-map-features</code>.</p>
 
     <h2 class="govuk-heading-l">How to link participants to a variation</h2>
     <ol class="govuk-list govuk-list--number">
       <li>Give the participant the link for the variation you want to test, from the table above.</li>
-      <li>The link remembers the variation, then opens the results page, so the participant starts where they would in the real service.</li>
+      <li>The link remembers the variation, then opens the map with the site boundary from the Product 1 mock-up already drawn.</li>
+      <li>The participant selects <strong>Get summary report</strong> to go to the results page.</li>
       <li>When the participant selects <strong>View downloadable flood map for this location</strong>, they are taken to the variation you chose.</li>
     </ol>
     <p class="govuk-body">
-      The variation is not shown in the address of the results page, so participants cannot see which version they have been given.
+      The variation is not shown in the address of the map or results page, so participants cannot see which version they have been given.
     </p>
 
     <div class="govuk-warning-text">
@@ -64,7 +61,7 @@
         <span class="govuk-visually-hidden">Warning</span>
         The variation is remembered in the browser until it is changed or the prototype data is cleared. Always use a
         variation link at the start of each session, even if the same browser was used for a previous participant.
-        If no variation has been chosen, participants see the main design.
+        If no variation has been chosen, participants see the existing map features option.
       </strong>
     </div>
 
@@ -75,9 +72,14 @@
 
     <h2 class="govuk-heading-l">What each variation tests</h2>
 
-    <h3 class="govuk-heading-m">Main design</h3>
+    <h3 class="govuk-heading-m">Existing map features</h3>
     <p class="govuk-body">
-      A responsive HTML version of Product 1 that users can preview before they print or download it. It includes all
+      The maps use the same map features and styling as the flood map for planning today, with see-through flood
+      colours. It is the simplest option to build, as it needs no new map features. The solid colours variation tests
+      features that could make the maps more accessible.
+    </p>
+    <p class="govuk-body">
+      Both variations share the same responsive HTML page, which users can preview before they print or download it. It includes all
       the data available on the flood map for planning for the site: flood zones, flood zones with climate change,
       surface water and surface water with climate change.
     </p>
@@ -87,23 +89,6 @@
       <li>An "at a glance" table gives a quick answer for each dataset</li>
       <li>Surface water shows a 1 in 100 chance by default, with 1 in 30 and 1 in 1000 as an option</li>
     </ul>
-
-    <h3 class="govuk-heading-m">Sample points</h3>
-    <p class="govuk-body">
-      Surface water maps are cropped close to the site boundary. Numbered sample points are placed in each depth band
-      within the boundary, and a table gives the depth at each point.
-    </p>
-    <p class="govuk-body">Accessibility advantages:</p>
-    <ul class="govuk-list govuk-list--bullet">
-      <li>Depths can be read from the table without relying on colour, which helps users with low colour vision</li>
-      <li>Screen reader users get the depth information as text, rather than only from the map image</li>
-      <li>The close crop makes small areas of surface water easier to see</li>
-      <li>Points are only shown where there is surface water, so the map is not cluttered</li>
-    </ul>
-    <div class="govuk-inset-text">
-      This mirrors the intelligent sample points we are planning to bring into Product 4 soon. Testing it in Product 1
-      helps us understand whether users find sample points useful, and how they expect them to be placed and labelled.
-    </div>
 
     <h3 class="govuk-heading-m">Solid colours with map details on top</h3>
     <p class="govuk-body">
@@ -124,12 +109,11 @@
 
     <h2 class="govuk-heading-l">Limitations of the prototypes</h2>
     <ul class="govuk-list govuk-list--bullet">
-      <li>All three variations use fixed map images captured from the flood map for planning. The maps do not change with the participant's boundary or location</li>
-      <li>The main design and the solid colours variation use the location from the example Product 1 (443574/161376). The sample points variation uses a nearby example site, chosen because it has varied surface water depths</li>
+      <li>Both variations use fixed map images captured from the flood map for planning. The maps do not change with the participant's boundary or location</li>
+      <li>Both variations use the location from the example Product 1 (443574/161376)</li>
       <li>The surface water results in the "at a glance" table are illustrative</li>
       <li>Choosing a scale only changes the label shown beside the flood zone maps, not the maps themselves</li>
       <li><strong>Download PDF</strong> downloads a fixed example PDF with the default settings. It does not include the participant's reference or data choices. <strong>Print this page</strong> does follow their settings</li>
-      <li>Sample points were placed by reading the map colours. In the live service they would be calculated from the flood data</li>
       <li>In the solid colours variation, map labels on the edge of a flood area can be partly white and partly dark, because they were redrawn from map images</li>
     </ul>
 

@@ -8,7 +8,6 @@
       "pages": [
         { "name": "Map page", "url": "/v3-9-0-0/map" },
         { "name": "Product 1", "url": "/v3-9-0-0/product1-3" },
-        { "name": "Product 1 variation: sample points", "url": "/v3-9-0-0/product1-4" },
         { "name": "Product 1 variation: solid colours", "url": "/v3-9-0-0/product1-5" }
       ],
       "prototypeUrl": "/v3-9-0-0/start",

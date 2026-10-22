@@ -54,6 +54,8 @@ router.get('/map-help', (req, res) => res.redirect('/v3-8-0-0/help'))
 // /v3-8-0-0/results – only redirect at the site root, to avoid a redirect loop.
 router.get('/results', (req, res, next) => {
   if (req.baseUrl) return next()
+  // v3-9-0-0 uses the same shared map, so let its own /results route handle requests from its pages
+  if ((req.get('Referer') || '').includes('/v3-9-0-0/')) return next()
   const query = req.url.includes('?') ? req.url.slice(req.url.indexOf('?')) : ''
   res.redirect('/v3-8-0-0/results' + query)
 })

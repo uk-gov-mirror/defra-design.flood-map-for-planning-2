@@ -43,7 +43,7 @@
 
 {% macro swMap(file, title, chance, period) %}
   <figure class="p1-figure">
-    <img src="/public/images/product1-v3-9-0-0/solid-{{ file }}?v=6" alt="Map of the site and surrounding area showing surface water flooding with a {{ chance }} chance each year, {{ period }}. Shaded orange areas show depth, darker for deeper water">
+    <img src="/public/images/product1-v3-9-0-0/solid-{{ file }}?v=7" alt="Map of the site and surrounding area showing surface water flooding with a {{ chance }} chance each year, {{ period }}. Shaded orange areas show depth, darker for deeper water">
     <figcaption class="govuk-body-s"><strong>{{ title }}</strong>: {{ chance }} chance each year, {{ period }}</figcaption>
   </figure>
 {% endmacro %}
@@ -109,11 +109,11 @@
         </tr>
         <tr class="govuk-table__row" data-row="sw-present">
           <th scope="row" class="govuk-table__header"><a class="govuk-link" href="#sw-heading">Surface water, present day</a></th>
-          <td class="govuk-table__cell">Some surface water at a 1 in 100 chance, mostly under 150mm deep</td>
+          <td class="govuk-table__cell">Surface water inside your site boundary at a 1 in 100 chance, up to 300mm deep</td>
         </tr>
         <tr class="govuk-table__row" data-row="sw-cc">
           <th scope="row" class="govuk-table__header"><a class="govuk-link" href="#swcc-heading">Surface water with climate change</a></th>
-          <td class="govuk-table__cell">Some surface water at a 1 in 100 chance, mostly under 300mm deep</td>
+          <td class="govuk-table__cell">Surface water inside your site boundary at a 1 in 100 chance, up to 300mm deep</td>
         </tr>
       </tbody>
     </table>
@@ -125,7 +125,7 @@
     <p class="govuk-body">Flood zones show the chance of flooding from rivers and the sea, ignoring flood defences. They are used to decide whether a flood risk assessment is needed.</p>
     <div class="p1-map-layout">
       <figure class="p1-figure">
-        <img src="/public/images/product1-v3-9-0-0/fz-present.png?v=6" alt="Map of the site and surrounding area. A river channel running north-east to south-west is in flood zone 3, with flood zone 2 along its edges. The south-east end of the site boundary is in flood zone 3">
+        <img src="/public/images/product1-v3-9-0-0/solid-fz-present.png?v=9" alt="Map of the site and surrounding area. Flood zones are shown in solid colours, with road names and property lines in white over them. A river channel running north-east to south-west is in flood zone 3, with flood zone 2 along its edges. The south-east end of the site boundary is in flood zone 3">
         <figcaption class="govuk-body-s"><strong>Flood zones, present day</strong></figcaption>
       </figure>
       <div class="p1-key-panel">
@@ -181,6 +181,7 @@
   <section class="p1-section p1-map-section" id="sw-present" data-section="sw-present" aria-labelledby="sw-heading">
     <h2 class="govuk-heading-l p1-anchor-target" id="sw-heading" tabindex="-1">Surface water, present day</h2>
     <p class="govuk-body">Surface water flooding happens when heavy rain cannot drain away. It is not part of the flood zones, so it does not change whether a flood risk assessment is needed, but you may need to consider it in one. The map shows areas with a 1 in 100 (1%) chance of flooding each year.</p>
+    <p class="govuk-body">There is a risk of surface water flooding inside your site boundary, up to 300mm deep.</p>
     <div class="p1-map-layout">
       {{ swMap("sw-present-100.png", "Surface water, present day", "1 in 100 (1%)", "present day") }}
       <div class="p1-key-panel">
@@ -210,6 +211,7 @@
   <section class="p1-section p1-map-section" id="sw-cc" data-section="sw-cc" aria-labelledby="swcc-heading">
     <h2 class="govuk-heading-l p1-anchor-target" id="swcc-heading" tabindex="-1">Surface water with climate change</h2>
     <p class="govuk-body">How surface water flooding with a 1 in 100 (1%) chance each year could change between 2061 and 2125, based on a central allowance for climate change.</p>
+    <p class="govuk-body">There is a risk of surface water flooding inside your site boundary, up to 300mm deep.</p>
     <div class="p1-map-layout">
       {{ swMap("sw-cc-100.png", "Surface water with climate change", "1 in 100 (1%)", "2061 to 2125") }}
       <div class="p1-key-panel">
