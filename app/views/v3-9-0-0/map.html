@@ -7,8 +7,7 @@
 {% endblock %}
 
 {% block head %}
-<link href="/public/javascripts/interactive-map/map.css" rel="stylesheet" type="text/css">
-<!-- <link href="/public/stylesheets/application.css" rel="stylesheet" type="text/css"> -->
+<link href="{{ mapCodeUrl }}/map.css" rel="stylesheet" type="text/css">
 {% endblock %}
 
 {% block bodyStart %}
@@ -18,7 +17,6 @@
 <script>
   window.APP_FOLDER = "{{ folder }}";
 </script>
-<!-- <script src="/public/javascripts/map.js"></script> -->
 {% endblock %}
 
 {% block header %}
@@ -64,12 +62,14 @@
 {% endblock %}
 
 {% block pageScripts %}
-  <script src="/public/javascripts/interactive-map/map.js"></script>
-  <!-- 
-    <script type="module">
-      import {} from "/public/javascripts/v3.7.0.1/fmp-main.js"
-    </script> 
-  -->
+  <script src="{{ mapCodeUrl }}/map.js"></script>
+  <script type="module">
+    // NOTE: this imports v3.8.0.0/fmp-main.js
+    // If you want to make changes for 3.9
+    // copy v3.8.0.0/fmp-main.js to v3.9.0.0/fmp-main.js
+    // edit that new file and change the import here
+    import {} from "/public/javascripts/v3.8.0.0/fmp-main.js"
+  </script>
 {% endblock %}
 
 {% block footer %}
